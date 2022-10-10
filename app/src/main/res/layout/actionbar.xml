@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@color/morado">
@@ -10,11 +11,18 @@
         android:padding="4dp">
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="60dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/bannerlogo"></ImageView>
+            android:src="@drawable/bannerlogo"
+            android:layout_alignParentStart="true"/>
 
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/protec" />
     </RelativeLayout>
 
 </RelativeLayout>
