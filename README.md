@@ -1,4 +1,4 @@
-# Atizappan
+# Atizappán
 
 <img src="app/src/main/res/drawable/bannerlogo.png"/>
 
