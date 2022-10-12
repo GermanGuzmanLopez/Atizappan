@@ -3,7 +3,8 @@
 <img src="app/src/main/res/drawable/bannerlogo.png"/>
 
 
-Alertas tempranas
+
+Un proyecto en colaboracion con el municipio de Atizapán de Zaragoza y Protección Civíl
 ## Desarrolladores 
 - [@Isabelinna](https://github.com/isabelinna)
 - [@Fermi](https://github.com/A01745597)
