@@ -37,9 +37,9 @@
             <Button
                 android:id="@+id/bomberos"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_gravity="center"
-                android:layout_marginEnd="5dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="3"
                 android:text="Bomberos"
                 android:textAlignment="center"
@@ -73,8 +73,9 @@
             <Button
                 android:id="@+id/cruzRoja"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_gravity="center"
+                android:layout_marginRight="10dp"
                 android:layout_weight="3"
                 android:text="Cruz Roja"
                 android:textAlignment="center"
@@ -110,7 +111,7 @@
             <Button
                 android:id="@+id/emergencias"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"
                 android:layout_weight="3"
@@ -149,7 +150,7 @@
             <Button
                 android:id="@+id/seguridad"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"
                 android:layout_weight="3"
@@ -188,7 +189,7 @@
             <Button
                 android:id="@+id/caminos"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"
                 android:layout_weight="3"
@@ -226,7 +227,7 @@
             <Button
                 android:id="@+id/forestal"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"
                 android:layout_weight="3"
@@ -264,7 +265,7 @@
             <Button
                 android:id="@+id/derechos"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"
                 android:layout_weight="3"
