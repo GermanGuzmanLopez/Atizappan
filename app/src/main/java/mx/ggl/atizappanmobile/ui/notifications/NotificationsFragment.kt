@@ -49,7 +49,9 @@ class NotificationsFragment : Fragment() {
     }
 
     private fun configurarRVA() {
-        val arrAlertas = listOf(Alerta("Amenaza virtual de tiroteo","Desalojo de la Preparatoria Oficial No.64 tras amenaza de tiroteo.","https://github.com/GermanGuzmanLopez/Atizappan/blob/main/app/src/main/res/drawable/alert_high.png?raw=true","07.09.2022","Alta"))
+        val arrAlertas = listOf(Alerta("Amenaza de tiroteo","Desalojo de la Preparatoria Oficial No.64 tras amenaza de tiroteo.","https://github.com/GermanGuzmanLopez/Atizappan/blob/main/app/src/main/res/drawable/alert_high.png?raw=true","07.09.2022","Alta"),
+            Alerta("Incendio","Incendio en la carretera Chamapa-Lechería antes de salida Lago de Guadalupe","https://github.com/GermanGuzmanLopez/Atizappan/blob/main/app/src/main/res/drawable/alert_medium.png?raw=true","11.10.2022","Media"),
+            Alerta("Tormenta eléctrica","Se prevé que habrá una tormenta eléctrica a las 5pm, proceda con precaución","https://github.com/GermanGuzmanLopez/Atizappan/blob/main/app/src/main/res/drawable/alert_low.png?raw=true","12.10.2022","Baja"))
         val layout = LinearLayoutManager(requireContext())
         //Ya no se declara, se usa la variable de instancia
         adaptador = AdaptadorAlerta(requireContext(), arrAlertas)
