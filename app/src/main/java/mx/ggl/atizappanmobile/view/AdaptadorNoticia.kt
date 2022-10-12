@@ -25,7 +25,7 @@ class AdaptadorNoticia (val context: Context,
             //val url = renglonNoticia.findViewById<Button>(R.id.masbtn)
             //println(tvTitulo)
             val tvDescripcion = renglonNoticia.findViewById<TextView>(R.id.tvDescripcion)
-            val imgNoticia = renglonNoticia.findViewById<ImageView>(R.id.imgNoticia)
+            val imgNoticia = renglonNoticia.findViewById<ImageView>(R.id.imgAlerta)
             tvTitulo.setText(noticia.titulo)
             //println("titulo")
             //println(noticia.titulo)
