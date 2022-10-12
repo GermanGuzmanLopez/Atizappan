@@ -22,13 +22,11 @@ class AdaptadorNoticia (val context: Context,
     {
         fun set(noticia: Noticia) {
             val tvTitulo = renglonNoticia.findViewById<TextView>(R.id.tvTitulo)
-            //val url = renglonNoticia.findViewById<Button>(R.id.masbtn)
-            //println(tvTitulo)
+
             val tvDescripcion = renglonNoticia.findViewById<TextView>(R.id.tvDescripcion)
             val imgNoticia = renglonNoticia.findViewById<ImageView>(R.id.imgAlerta)
             tvTitulo.setText(noticia.titulo)
-            //println("titulo")
-            //println(noticia.titulo)
+
             tvDescripcion.setText(noticia.descripcion)
             // Descargar la bandera y ponerla en imgBandera
             val url = noticia.imagen

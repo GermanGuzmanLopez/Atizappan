@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import mx.ggl.atizappanmobile.databinding.FragmentHomeBinding
 import mx.ggl.atizappanmobile.databinding.FragmentNotificationsBinding
 import mx.ggl.atizappanmobile.model.Alerta
+import mx.ggl.atizappanmobile.model.ListaAlertas
 import mx.ggl.atizappanmobile.model.Noticia
 import mx.ggl.atizappanmobile.view.AdaptadorAlerta
 import mx.ggl.atizappanmobile.view.AdaptadorNoticia
@@ -48,29 +49,29 @@ class NotificationsFragment : Fragment() {
     }
 
     private fun configurarRVA() {
-        val arrAlertas = listOf(Alerta("Amenaza virtual de tiroteo","Desalojo de la Preparatoria Oficial No.64 tras amenaza de tiroteo.","","07.09.2022","Alta"))
+        val arrAlertas = listOf(Alerta("Amenaza virtual de tiroteo","Desalojo de la Preparatoria Oficial No.64 tras amenaza de tiroteo.","https://images.milenio.com/X2j3DLaeLo_ksLL0dRU6tsroF1M=/958x596/uploads/media/2022/09/07/las-publicaciones-fueron-posteriormente-eliminadas.jpg","07.09.2022","Alta"))
         val layout = LinearLayoutManager(requireContext())
         //Ya no se declara, se usa la variable de instancia
         adaptador = AdaptadorAlerta(requireContext(), arrAlertas)
-       // binding.rvNoticias.adapter = adaptador
-        //binding.rvNoticias.layoutManager = layout
+        binding.rvAlertas.adapter = adaptador
+        binding.rvAlertas.layoutManager = layout
 
         // separador
         val separador = DividerItemDecoration(requireContext(), layout.orientation)
-        //binding.rvNoticias.addItemDecoration(separador)
+        binding.rvAlertas.addItemDecoration(separador)
 
     }
 
     private fun configurarObservablesA() {
-        viewModel.listaAlertas.observe(viewLifecycleOwner){lista ->
-            val arrAlerta = lista.toList()
+        viewModel.listaAlertas.observe(viewLifecycleOwner){lista2 ->
+            val arrAlerta = lista2.toList()
             adaptador.arrAlertas = arrAlerta //cambiamos la fuente de datos
-            adaptador.notifyDataSetChanged() //Recarga los datos
+            //adaptador.notifyDataSetChanged() //Recarga los datos
         }
     }
 
     override fun onStart(){
         super.onStart()
-        viewModel.descargarDatosAlertas()
+        //viewModel.descargarDatosAlertas()
     }
 }
