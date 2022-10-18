@@ -38,6 +38,18 @@
                     android:layout_weight="1"
                     app:srcCompat="@drawable/protec" />
 
+                <ImageButton
+                    android:id="@+id/infoApp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="false"
+                    android:backgroundTint="#FFFFFF"
+                    android:cropToPadding="false"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/creds" />
+
             </LinearLayout>
 
             <ImageView
