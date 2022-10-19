@@ -1,67 +1,54 @@
 package mx.ggl.atizappanmobile.view
 
 import android.content.Context
-import android.content.Intent
-import android.net.Uri
+import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.google.firebase.storage.FirebaseStorage
 import mx.ggl.atizappanmobile.R
 import mx.ggl.atizappanmobile.model.Alerta
-import mx.ggl.atizappanmobile.model.Noticia
+import java.io.File
 
-class AdaptadorAlerta (val context: Context,
-                       var arrAlertas: List<Alerta>)
-    : RecyclerView.Adapter<AdaptadorAlerta.RenglonAlerta>()
+class AdapatorAlerta(private val alertaList: ArrayList<Alerta>) : RecyclerView.Adapter<AdapatorAlerta.MyViewHolder>()
 {
-    class RenglonAlerta(var renglonAlerta: View) : RecyclerView.ViewHolder(renglonAlerta)
-    {
-        fun set(alerta: Alerta) {
-            val tvAlerta = renglonAlerta.findViewById<TextView>(R.id.tvAlerta)
-            val tvDescripcionAlerta = renglonAlerta.findViewById<TextView>(R.id.tvDescripcionAlerta)
-            val imgAlerta = renglonAlerta.findViewById<ImageView>(R.id.imgAlerta)
-            val tvFecha = renglonAlerta.findViewById<TextView>(R.id.tvFecha)
-            val tvPrioridad = renglonAlerta.findViewById<TextView>(R.id.tvPrioridad)
-            tvAlerta.setText(alerta.encabezado)
-            tvFecha.setText(alerta.fecha)
-            tvPrioridad.setText(alerta.prioridad)
-            tvDescripcionAlerta.setText(alerta.descripcion)
+    class MyViewHolder(var itemView: View) : RecyclerView.ViewHolder(itemView){
+        fun set(alerta: Alerta){
+            val titulo : TextView = itemView.findViewById(R.id.tvAlerta)
+            val descripcion: TextView = itemView.findViewById(R.id.tvDescripcionAlerta)
+            val fecha: TextView = itemView.findViewById(R.id.tvFecha)
+            val prioridad: TextView = itemView.findViewById(R.id.tvPrioridad)
+            val imageView: ImageView = itemView.findViewById(R.id.imgAlerta)
 
-            // Descargar la bandera y ponerla en imgBandera
-            val url = alerta.imagen
+            titulo.text = alerta.titulo
+            descripcion.text = alerta.descripcion
+            fecha.text = alerta.fecha
+            prioridad.text = alerta.prioridad
 
-            Glide.with(renglonAlerta.context).load(url).into(imgAlerta);
+            val storageRef = FirebaseStorage.getInstance().reference.child("images/${alerta.img}")
+
+            val localFile = File.createTempFile("tempImage", "png")
+            storageRef.getFile(localFile).addOnSuccessListener {
+                val bitmap = BitmapFactory.decodeFile(localFile.absolutePath)
+                imageView.setImageBitmap(bitmap)
+            }
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RenglonAlerta {
-       val vista = LayoutInflater.from(context)
-            .inflate(R.layout.renglon_alerta, parent, false)
-        return RenglonAlerta(vista)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):AdapatorAlerta.MyViewHolder {
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.renglon_alerta,
+            parent,false)
+        return MyViewHolder(itemView)
     }
-
-    override fun onBindViewHolder(holder: RenglonAlerta, position: Int) {
-        val alerta = arrAlertas[position]
+    override fun onBindViewHolder(holder: AdapatorAlerta.MyViewHolder, position: Int){
+        val alerta : Alerta = alertaList[position]
         holder.set(alerta)
-        /**val boton = holder.renglonAlerta.findViewById<Button>(R.id.imgAlerta)
-        boton.setOnClickListener{
-            println("Click en $position")
-            val uri = Uri.parse(arrAlertas[position].descripcion)
-            val intAlerta = Intent(Intent.ACTION_VIEW, uri)
-            context.startActivity(intAlerta)**/
-        }
-
-
-
-
-    override fun getItemCount(): Int {
-        return arrAlertas.size
     }
-
-
+    override fun getItemCount(): Int {
+        return alertaList.size
+    }
 }

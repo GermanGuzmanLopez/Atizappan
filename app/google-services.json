@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "583065173384",
+    "project_id": "atizappan",
+    "storage_bucket": "atizappan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583065173384:android:7042e1737c413c96004e3d",
+        "android_client_info": {
+          "package_name": "mx.ggl.atizappanmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583065173384-1kc0rbq07olnm4qs4o9sgn4kqpbjn2kv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsZT0IfJMZaOasyb4BEivsFo7leGvKcLU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583065173384-1kc0rbq07olnm4qs4o9sgn4kqpbjn2kv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

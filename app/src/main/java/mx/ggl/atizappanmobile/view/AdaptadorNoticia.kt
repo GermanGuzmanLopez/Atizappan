@@ -14,9 +14,7 @@ import com.bumptech.glide.Glide
 import mx.ggl.atizappanmobile.R
 import mx.ggl.atizappanmobile.model.Noticia
 
-class AdaptadorNoticia (val context: Context,
-                        var arrNoticias: List<Noticia>)
-    : RecyclerView.Adapter<AdaptadorNoticia.RenglonNoticia>()
+class AdaptadorNoticia (val context: Context, var arrNoticias: List<Noticia>) : RecyclerView.Adapter<AdaptadorNoticia.RenglonNoticia>()
 {
     class RenglonNoticia(var renglonNoticia: View) : RecyclerView.ViewHolder(renglonNoticia)
     {
