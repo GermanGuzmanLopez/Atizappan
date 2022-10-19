@@ -28,14 +28,20 @@ class AdapatorAlerta(private val alertaList: ArrayList<Alerta>) : RecyclerView.A
             descripcion.text = alerta.descripcion
             fecha.text = alerta.fecha
             prioridad.text = alerta.prioridad
-
-            val storageRef = FirebaseStorage.getInstance().reference.child("images/${alerta.img}")
-
-            val localFile = File.createTempFile("tempImage", "png")
-            storageRef.getFile(localFile).addOnSuccessListener {
-                val bitmap = BitmapFactory.decodeFile(localFile.absolutePath)
-                imageView.setImageBitmap(bitmap)
+            if (alerta.img != "null"){
+                val storageRef = FirebaseStorage.getInstance().reference.child("images/${alerta.img}")
+                val localFile = File.createTempFile("tempImage", "png")
+                storageRef.getFile(localFile).addOnSuccessListener {
+                    val bitmap = BitmapFactory.decodeFile(localFile.absolutePath)
+                    imageView.setImageBitmap(bitmap)
+                }
+            } else if (alerta.img == "null") {
+                println("-----------------------------------------")
+                println(alerta.img)
+                println("-----------------------------------------")
+                Glide.with(itemView.context).load(R.drawable.alert_high).into(imageView)
             }
+
         }
     }
 
