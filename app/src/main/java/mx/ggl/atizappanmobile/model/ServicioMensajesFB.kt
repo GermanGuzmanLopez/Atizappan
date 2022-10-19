@@ -20,7 +20,7 @@ import mx.ggl.atizappanmobile.ui.notifications.NotificationsFragment
 class ServicioMensajesFB : FirebaseMessagingService() {
     val db = Firebase.firestore
     private val channelName = "alertasPC"
-    private val channelId = "mx.itesm.ycr.firebase"
+    private val channelId = "mx.ggl.atizappanmobile"
 
     override fun onNewToken(token: String) {
         val values = hashMapOf("token" to token)
@@ -36,8 +36,6 @@ class ServicioMensajesFB : FirebaseMessagingService() {
                     it.toString(), Toast.LENGTH_LONG).show()
             }
     }
-
-
 
     override fun onMessageReceived(message: RemoteMessage) {
         if (message.notification != null) {
