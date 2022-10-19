@@ -53,10 +53,10 @@
                     android:layout_height="60dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#00FFFFFF"
                     android:cropToPadding="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/informacion" />
+                    android:src="@drawable/ellipsis2" />
 
             </LinearLayout>
 
@@ -89,10 +89,10 @@
                     android:layout_height="60dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#00FFFFFF"
                     android:cropToPadding="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/informacion" />
+                    android:src="@drawable/ellipsis2" />
 
             </LinearLayout>
 
@@ -127,10 +127,10 @@
                     android:layout_height="60dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#00FFFFFF"
                     android:cropToPadding="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/informacion" />
+                    android:src="@drawable/ellipsis2" />
 
 
             </LinearLayout>
@@ -166,10 +166,10 @@
                     android:layout_height="60dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#00FFFFFF"
                     android:cropToPadding="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/informacion" />
+                    android:src="@drawable/ellipsis2" />
 
 
             </LinearLayout>
@@ -205,10 +205,10 @@
                     android:layout_height="60dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#00FFFFFF"
                     android:cropToPadding="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/informacion" />
+                    android:src="@drawable/ellipsis2" />
 
             </LinearLayout>
 
@@ -243,10 +243,10 @@
                     android:layout_height="60dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#00FFFFFF"
                     android:cropToPadding="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/informacion" />
+                    android:src="@drawable/ellipsis2" />
 
             </LinearLayout>
 
@@ -281,10 +281,10 @@
                     android:layout_height="60dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#00FFFFFF"
                     android:cropToPadding="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/informacion" />
+                        android:src="@drawable/ellipsis2" />
 
             </LinearLayout>
 
