@@ -22,14 +22,23 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.banner.infoApp.setOnClickListener(){
-            val alert= AlertDialog.Builder(this)
+            /*val alert= AlertDialog.Builder(this)
                 .setTitle("Créditos")
                 .setMessage("Atizappán es una aplicación desarrollada por:\n-Isabel Vieyra\n-Germán Guzmán\n-Yahir Cortéz\n-Naomi Anciola\n-Fernando Emilio Nava\n" +
                         "\nEn colaboración con el municipio de Atizapán de Zaragoza y Protección Civíl del Estado de México\n" +
                         "\nContacto: A01745860@tec.mx")
                 .setPositiveButton("Aceptar"){_, _ ->
                 }
-            alert.show()
+            alert.show()*/
+
+            val builder = AlertDialog.Builder(this)
+                .setPositiveButton("Aceptar"){_, _ ->
+                }
+                .setCancelable(false)
+            val view = layoutInflater.inflate(R.layout.creds,null)
+            builder.setView(view)
+            val dialog = builder.create()
+            dialog.show()
         }
 
         val navView: BottomNavigationView = binding.navView

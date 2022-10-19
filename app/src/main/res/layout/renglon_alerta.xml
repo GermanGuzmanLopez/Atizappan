@@ -24,9 +24,12 @@
 
                 <ImageView
                     android:id="@+id/imageView10"
-                    android:layout_width="64dp"
+                    android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="1dp"
+                    android:padding="5dp"
                     app:srcCompat="@drawable/alert_high" />
 
                 <TextView
@@ -36,6 +39,7 @@
                     android:ellipsize="end"
                     android:maxLines="2"
                     android:padding="5dp"
+                    android:paddingStart="5dp"
                     android:text="Alerta"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
