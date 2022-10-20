@@ -46,7 +46,7 @@
                     android:text="Alerta cosas randos ammm sigo escribiendo aqui ajja"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
