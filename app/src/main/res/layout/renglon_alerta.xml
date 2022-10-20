@@ -38,12 +38,12 @@
                 <TextView
                     android:id="@+id/tvAlerta"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="70dp"
                     android:ellipsize="end"
                     android:maxLines="2"
                     android:padding="5dp"
                     android:paddingStart="5dp"
-                    android:text="Alerta"
+                    android:text="Alerta cosas randos ammm sigo escribiendo aqui ajja"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="24sp"
@@ -133,7 +133,7 @@
 
             </LinearLayout>
 
-<!--            <LinearLayout
+            <!--            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
