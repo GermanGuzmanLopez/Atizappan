@@ -36,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:text="- Isabel Vieyra Enríquez"
+                android:text="Isabel Vieyra Enríquez"
                 android:textAlignment="center" />
 
             <TextView
@@ -44,7 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:text="- Germán Guzmán López"
+                android:text="Germán Guzmán López"
                 android:textAlignment="center" />
 
             <TextView
@@ -52,7 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:text="- Yahir Cortéz Rodríguez"
+                android:text="Yahir Cortéz Rodríguez"
                 android:textAlignment="center" />
 
             <TextView
@@ -60,7 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:text="- Naomi Anciola Calderón"
+                android:text="Naomi Anciola Calderón"
                 android:textAlignment="center" />
 
             <TextView
@@ -68,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:text="- Fernando Emilio Nava Cano"
+                android:text="Fernando Emilio Nava Cano"
                 android:textAlignment="center" />
 
             <TextView
